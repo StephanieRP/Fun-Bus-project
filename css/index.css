@@ -307,6 +307,7 @@ nav .navigation-links li {
 }
 .home .content-destination img {
   border-radius: 10px;
+  max-width: 100%;
 }
 @media (max-width: 500px) {
   .home .content-destination img {
@@ -357,6 +358,12 @@ nav .navigation-links li {
   width: 70%;
   margin: 2rem auto;
 }
+@media (max-width: 800px) {
+  .home .content-form {
+    width: 100%;
+    margin: 2rem 3 auto;
+  }
+}
 .home .content-form h2 {
   text-align: center;
 }
@@ -364,8 +371,9 @@ nav .navigation-links li {
   display: grid;
   grid-template-columns: 100px 400px;
   background: #C0C0C0;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 0.5rem;
+  box-shadow: 2px 2px 1px #17A2B8;
 }
 @media (max-width: 500px) {
   .home .content-form form {

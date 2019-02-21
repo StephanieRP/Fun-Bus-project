@@ -87,6 +87,7 @@
 
     img {
       border-radius: 10px;
+      max-width: 100%;
       @media @mobile {
         padding: 0;
         max-width: 100%;
@@ -127,6 +128,10 @@
   .content-form {
     width: 70%;
     margin: @twoRem auto;
+    @media @tablet {
+      width: 100%;
+      margin: @twoRem +3 auto;
+    }
 
     h2 {
 
@@ -139,8 +144,9 @@
       display: grid;
       grid-template-columns: 100px 400px;
       background: @silver;
-      padding: @oneRem;
+      padding: @twoRem;
       border-radius: .5rem;
+      box-shadow: 2px 2px  1px @eastern-blue;
       @media @mobile {
         display: block;
         padding: @twoRem;
