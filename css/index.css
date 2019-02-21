@@ -178,6 +178,11 @@ nav {
   border-left: none;
   border-top: none;
 }
+@media (max-width: 500px) {
+  nav {
+    flex-wrap: wrap;
+  }
+}
 nav .logo {
   padding-top: 1rem;
 }
@@ -202,6 +207,11 @@ nav .navigation-links li {
   font-size: 1.6rem;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .home {
+    padding: 0 2rem;
+  }
+}
 .home .cta {
   border: dashed #C0C0C0 2px;
   border-right: none;
@@ -225,9 +235,21 @@ nav .navigation-links li {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    padding-right: 0;
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    padding-right: 0;
+    width: 100%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -235,6 +257,11 @@ nav .navigation-links li {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -244,12 +271,29 @@ nav .navigation-links li {
   padding-right: 1%;
   padding-left: 0;
 }
+@media (max-width: 500px) {
+  .home .inverse-content .img-content {
+    padding: 0;
+    width: 100%;
+  }
+}
 .home .content-destination {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-destination img {
+    padding: 0;
+    width: 100%;
+  }
 }
 .home .content-pick {
   padding-top: 30px;
@@ -257,9 +301,21 @@ nav .navigation-links li {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
 }
 .home .content-pick .destination .btn {
   width: 100%;
@@ -269,4 +325,9 @@ nav .navigation-links li {
   padding: 2rem;
   border-radius: 1rem;
   font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    padding: 1.5rem;
+  }
 }

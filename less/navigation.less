@@ -4,9 +4,13 @@ nav {
     .flex-apart(space-around,center);
         padding: @twoRem 10%;
         .border();
+        @media @mobile {
+            .flex-mobile();
+        }
 
         .logo  {
             padding-top: @oneRem;
+            
         }
 
         .navigation-links {
