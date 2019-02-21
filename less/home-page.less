@@ -1,5 +1,21 @@
 .home {
 
+  .cta { 
+    .border();
+    padding-bottom: @oneRem;
+    
+      .cta-text {
+        h2 {
+          padding-top: @oneRem + .5;
+        }
+
+        p {
+          padding-right: @oneRem;
+        }
+      }
+
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -56,6 +72,10 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .sign-up_btn();
+      }
     }
   }
 }// home

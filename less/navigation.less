@@ -2,16 +2,20 @@
 
 nav {
     .flex-apart(space-around,center);
-        padding: 2rem 8%;
-        border-bottom: dashed @silver 2px;
+        padding: @twoRem 10%;
+        .border();
+
+        .logo  {
+            padding-top: @oneRem;
+        }
 
         .navigation-links {
             .flex-apart(space-around, center);
-            font-size: 1.5rem;
-            padding-right: 3rem;
+            font-size: @oneRem + .5;
+            padding-right: @twoRem + 1;
 
                 li {
-                    padding: 0 1.5rem;
+                    padding: @oneRem + .5;
                 }
         }
 
