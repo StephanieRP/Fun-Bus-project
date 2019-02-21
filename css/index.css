@@ -181,10 +181,19 @@ nav {
 @media (max-width: 500px) {
   nav {
     flex-wrap: wrap;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
 }
 nav .logo {
   padding-top: 1rem;
+}
+@media (max-width: 500px) {
+  nav .logo {
+    margin-left: 10rem;
+  }
 }
 nav .navigation-links {
   display: flex;
@@ -193,8 +202,13 @@ nav .navigation-links {
   font-size: 1.5rem;
   padding-right: 3rem;
 }
+@media (max-width: 500px) {
+  nav .navigation-links {
+    padding: 0;
+  }
+}
 nav .navigation-links li {
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 .footer {
   width: 100%;
@@ -208,6 +222,11 @@ nav .navigation-links li {
   padding: 20px;
 }
 @media (max-width: 500px) {
+  .home {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 800px) {
   .home {
     padding: 0 2rem;
   }
@@ -292,12 +311,15 @@ nav .navigation-links li {
 @media (max-width: 500px) {
   .home .content-destination img {
     padding: 0;
-    width: 100%;
+    max-width: 100%;
   }
 }
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
+  border: dashed #C0C0C0 2px;
+  border-right: none;
+  border-left: none;
   display: flex;
   justify-content: space-between;
 }
@@ -329,5 +351,79 @@ nav .navigation-links li {
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
     padding: 1.5rem;
+  }
+}
+.home .content-form {
+  width: 70%;
+  margin: 2rem auto;
+}
+.home .content-form h2 {
+  text-align: center;
+}
+.home .content-form form {
+  display: grid;
+  grid-template-columns: 100px 400px;
+  background: #C0C0C0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 500px) {
+  .home .content-form form {
+    display: block;
+    padding: 2rem;
+  }
+}
+.home .content-form form h4 {
+  font-size: 1.5rem;
+}
+.home .content-form form input {
+  border-radius: 0.5rem;
+}
+@media (max-width: 500px) {
+  .home .content-form form input {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
+}
+.home .content-form form .form-label {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.home .content-form form .form-label label {
+  font-size: 1.5rem;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+}
+.home .content-form form .form-box textarea {
+  margin-left: 100%;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .home .content-form form .form-box textarea {
+    margin-left: 0;
+    width: 80%;
+  }
+}
+.home .content-form form button {
+  width: 100%;
+  background: #17A2B8;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  margin-left: 23rem;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .home .content-form form button {
+    margin-left: 0;
+    width: 80%;
   }
 }
