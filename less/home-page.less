@@ -113,14 +113,14 @@
       .btn {
         .sign-up_btn();
         cursor: pointer;
+        .content-text();
+        font-weight: 400;
         @media @mobile {
           padding: @oneRem + .5;
   
         }
 
-        &:hover {
-          .btn-hover();
-         }
+
       }
     }
   }
@@ -192,14 +192,11 @@
          label {
           @media @tablet {
             display: flex;
-            // width: 20%;
-            // margin-bottom: @oneRem;
           }  
 
           @media @mobile {
             display: block;
             width: 20%;
-            // margin-bottom: @oneRem;
           }  
          }
 
@@ -233,10 +230,6 @@
           @media @tablet {
             margin-left: 0;
             width: 100%;
-           }
-
-           &:hover {
-            .btn-hover();
            }
 
         }
