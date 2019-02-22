@@ -87,11 +87,7 @@
 
     img {
       border-radius: 10px;
-      max-width: 100%;
-      @media @mobile {
-        padding: 0;
-        max-width: 100%;
-      }
+    
     }
   }
 
@@ -116,10 +112,15 @@
 
       .btn {
         .sign-up_btn();
+        cursor: pointer;
         @media @mobile {
           padding: @oneRem + .5;
   
         }
+
+        &:hover {
+          .btn-hover();
+         }
       }
     }
   }
@@ -146,25 +147,33 @@
       background: @silver;
       padding: @twoRem;
       border-radius: .5rem;
-      box-shadow: 2px 2px  1px @eastern-blue;
-      @media @mobile {
+      box-shadow: 2px 2px 1px @eastern-blue,
+                  -2px -2px 1px @eastern-blue;
+      @media @tablet {
         display: block;
+        width: 100%;
+
+      }            
+      @media @mobile {
         padding: @twoRem;
       }
   
         h4 {
           font-size: @oneRem + .5;
-        
 
         }
 
 
         input {
           border-radius: .5rem;
-          @media @mobile {
-            width: 60%;
+          outline: none;
+          border: solid @silver 1px;
+          @media @tablet {
+            width: 100%;
             margin-bottom: @oneRem;
-          }
+          }    
+          
+          
       
         }
        .form-label {
@@ -174,6 +183,24 @@
           font-size: @oneRem + .5;
           .content-text();
           margin: 0;
+          @media @tablet {
+            width: 50%;
+    
+          }    
+         }
+
+         label {
+          @media @tablet {
+            display: flex;
+            // width: 20%;
+            // margin-bottom: @oneRem;
+          }  
+
+          @media @mobile {
+            display: block;
+            width: 20%;
+            // margin-bottom: @oneRem;
+          }  
          }
 
         }
@@ -181,13 +208,19 @@
         .form-box textarea{
           margin-left: 100%;
           border-radius: .5rem;
+          border: solid @silver 1px;
           outline: none;
           .content-text();
           font-size: @oneRem + .5;
-          @media @mobile {
+          @media @tablet {
             margin-left: 0;
-            width: 80%;
-           }
+            width: 100%;
+    
+          }    
+          // @media @mobile {
+          //   margin-left: 0;
+          //   width: 100%;
+          //  }
 
         }
         button {
@@ -195,10 +228,15 @@
           margin-left: 23rem;
           margin-top: @oneRem;
           padding: .9rem;
+          cursor: pointer;
           .content-text();
-          @media @mobile {
+          @media @tablet {
             margin-left: 0;
-            width: 80%;
+            width: 100%;
+           }
+
+           &:hover {
+            .btn-hover();
            }
 
         }

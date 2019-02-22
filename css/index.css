@@ -307,13 +307,6 @@ nav .navigation-links li {
 }
 .home .content-destination img {
   border-radius: 10px;
-  max-width: 100%;
-}
-@media (max-width: 500px) {
-  .home .content-destination img {
-    padding: 0;
-    max-width: 100%;
-  }
 }
 .home .content-pick {
   padding-top: 30px;
@@ -348,11 +341,16 @@ nav .navigation-links li {
   padding: 2rem;
   border-radius: 1rem;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
     padding: 1.5rem;
   }
+}
+.home .content-pick .destination .btn:hover {
+  background: #FFEBCD;
+  color: #17A2B8;
 }
 .home .content-form {
   width: 70%;
@@ -373,11 +371,16 @@ nav .navigation-links li {
   background: #C0C0C0;
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 1px #17A2B8;
+  box-shadow: 2px 2px 1px #17A2B8, -2px -2px 1px #17A2B8;
+}
+@media (max-width: 800px) {
+  .home .content-form form {
+    display: block;
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   .home .content-form form {
-    display: block;
     padding: 2rem;
   }
 }
@@ -386,10 +389,12 @@ nav .navigation-links li {
 }
 .home .content-form form input {
   border-radius: 0.5rem;
+  outline: none;
+  border: solid #C0C0C0 1px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-form form input {
-    width: 60%;
+    width: 100%;
     margin-bottom: 1rem;
   }
 }
@@ -403,17 +408,34 @@ nav .navigation-links li {
   font-family: 'Indie Flower', cursive;
   margin: 0;
 }
+@media (max-width: 800px) {
+  .home .content-form form .form-label label {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-form form .form-label label {
+    display: flex;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-form form .form-label label {
+    display: block;
+    width: 20%;
+  }
+}
 .home .content-form form .form-box textarea {
   margin-left: 100%;
   border-radius: 0.5rem;
+  border: solid #C0C0C0 1px;
   outline: none;
   font-family: 'Indie Flower', cursive;
   font-size: 1.5rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-form form .form-box textarea {
     margin-left: 0;
-    width: 80%;
+    width: 100%;
   }
 }
 .home .content-form form button {
@@ -427,11 +449,16 @@ nav .navigation-links li {
   margin-left: 23rem;
   margin-top: 1rem;
   padding: 0.9rem;
+  cursor: pointer;
   font-family: 'Indie Flower', cursive;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-form form button {
     margin-left: 0;
-    width: 80%;
+    width: 100%;
   }
+}
+.home .content-form form button:hover {
+  background: #FFEBCD;
+  color: #17A2B8;
 }
