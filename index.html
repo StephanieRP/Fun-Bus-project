@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <title>Fun Bus Travel Agency - Solution</title>
 
@@ -15,10 +17,27 @@
 </head>
 
 <body>
-
-  
      
+    <nav>
+        <div class="logo">
+          <h2>Fun Bus</h2>
+        </div>
+        <ul class="navigation-links">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
   <div class="container home">
+
+      <div class="cta">
+          <img src="./img/fun-bus.jpg" alt="fun bus header picture">
+          <div class="cta-text">
+            <h2>Welcome To Fun Bus!</h2>
+            <p>Traveling expedition modern, clean webdesign blogger clean website theme website. Design pretty design, travel blogger adventure Wordpress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
+          </div>
+      </div>
    
     <section class="content-section">
       <div class="text-content">
@@ -64,10 +83,50 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+<!-- form start -->
+    <section class="content-form">
+        <h2>Reach Out</h2>
+      <form action="">
+          <!-- first name -->
+          <h4>First Name:</h4>
+          <input id="firstName" type="text">
+       <!-- last name -->
+          <h4>Last Name:</h4>
+          <input id="lastName" type="text">
+          <!-- phone number -->
+          <h4>Phone Number:</h4>
+          <input id="phone" type="tel">
+        <!-- email address -->
+          <h4>Email Address:</h4>
+          <input id="email-address" type="text">
+         
+        <!-- travel options -->
+        <h4>Vacation:</h4>
+        <div class="form-label">
+          <label for="Fun_in_Sun">Fun In Sun
+          <input type="radio" id="Fun_in_Sun" name="vacation" value="Fun_in_Sun"
+          checked></label>
+          <label for="Mountain_Excursion">Mountain Excursion
+          <input type="radio" id="Mountain_Excursion" name="vacation" value="Mountain_Excursion">
+        </label>
+          <label for="Island_Getaway">Island Getaway
+          <input type="radio" id="Island_Getaway" name="vacation" value="Island_Getaway"></label>
+        </div>
+          <div class="form-box">
+            <textarea name="message" cols="55" rows="5" placeholder="More Information"></textarea>
+            <button type="button" class="">Submit</button>
+          </div>
+
+
+
+      </form>
+    </section>
+    <!-- form end -->
+
   </div><!-- container -->
 
   <footer class="footer">
-    <p>Copyright Fun Bus 2018</p>
+    <p>Copyright Fun Bus 2019</p>
   </footer>
 
 </body>

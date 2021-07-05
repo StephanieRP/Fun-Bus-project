@@ -1,5 +1,30 @@
 .home {
 
+  @media @mobile {
+    .padding-mobile();
+}
+
+  @media @tablet {
+    .padding-mobile();
+  }
+
+  .cta { 
+    .border();
+    border-top: none;
+    padding-bottom: @oneRem;
+    
+      .cta-text {
+        h2 {
+          padding-top: @oneRem + .5;
+        }
+
+        p {
+          padding-right: @oneRem;
+        }
+      }
+
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -11,11 +36,19 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        padding-right: 0;
+        .width-mobile();
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        padding-right: 0;
+        .width-mobile();
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +59,9 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -35,27 +71,168 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        padding: 0;
+        .width-mobile();
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      .width-mobile();
+    }
 
     img {
       border-radius: 10px;
+    
     }
   }
 
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    .border();
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      .width-mobile();
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        .width-mobile(80%);
+      }
+
+      .btn {
+        .sign-up_btn();
+        cursor: pointer;
+        .content-text();
+        font-weight: 400;
+        @media @mobile {
+          padding: @oneRem + .5;
+  
+        }
+
+
+      }
+    }
+  }
+
+
+  .content-form {
+    width: 70%;
+    margin: @twoRem auto;
+    @media @tablet {
+      width: 100%;
+      margin: @twoRem +3 auto;
+    }
+
+    h2 {
+
+      text-align: center;
+    }
+    
+
+
+    form {
+      display: grid;
+      grid-template-columns: 100px 400px;
+      background: @silver;
+      padding: @twoRem;
+      border-radius: .5rem;
+      box-shadow: 2px 2px 1px @eastern-blue,
+                  -2px -2px 1px @eastern-blue;
+      @media @tablet {
+        display: block;
+        width: 100%;
+
+      }            
+      @media @mobile {
+        padding: @twoRem;
+      }
+  
+        h4 {
+          font-size: @oneRem + .5;
+
+        }
+
+
+        input {
+          border-radius: .5rem;
+          outline: none;
+          border: solid @silver 1px;
+          @media @tablet {
+            width: 100%;
+            margin-bottom: @oneRem;
+          }    
+          
+          
+      
+        }
+       .form-label {
+         .flex-apart(space-between, center);
+
+         label {
+          font-size: @oneRem + .5;
+          .content-text();
+          margin: 0;
+          @media @tablet {
+            width: 50%;
+    
+          }    
+         }
+
+         label {
+          @media @tablet {
+            display: flex;
+          }  
+
+          @media @mobile {
+            display: block;
+            width: 20%;
+          }  
+         }
+
+        }
+
+        .form-box textarea{
+          margin-left: 100%;
+          border-radius: .5rem;
+          border: solid @silver 1px;
+          outline: none;
+          .content-text();
+          font-size: @oneRem + .5;
+          @media @tablet {
+            margin-left: 0;
+            width: 100%;
+    
+          }    
+          // @media @mobile {
+          //   margin-left: 0;
+          //   width: 100%;
+          //  }
+
+        }
+        button {
+          .sign-up_btn();
+          margin-left: 23rem;
+          margin-top: @oneRem;
+          padding: .9rem;
+          cursor: pointer;
+          .content-text();
+          @media @tablet {
+            margin-left: 0;
+            width: 100%;
+           }
+
+        }
     }
   }
 }// home

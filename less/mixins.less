@@ -1,1 +1,46 @@
 // Mixins in here
+
+.flex-apart(@justify: center, @align: center) {
+    display: flex;
+    justify-content: @justify;
+    align-content: @align;
+}
+
+.border() {
+    border: dashed @navigation-border 2px;
+    border-right: none;
+    border-left: none;
+}
+
+.sign-up_btn() {
+    width: 100%;
+    background: @button-bg;
+    text-align: center;
+    color: @white;
+    padding: @twoRem;
+    border-radius: @oneRem;
+    font-size: @oneRem + .8;
+
+    &:hover {
+        background: @sandy-beach;
+        color: @eastern-blue
+    }
+}
+
+
+
+.flex-mobile() {
+    flex-wrap: wrap;
+}
+
+.padding-mobile() {
+    padding: 0 @twoRem;
+}
+
+.width-mobile(@OneHun: 100%) {
+    width: @OneHun;
+}
+
+.content-text(){
+    font-family: 'Indie Flower', cursive;
+}
